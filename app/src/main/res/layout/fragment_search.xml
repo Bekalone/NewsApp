@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="20dp"
+    tools:context=".ui.fragment.search.SearchFragment">
+
+
+    <ImageButton
+        android:id="@+id/btn_menu_burger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_menu_burger" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Discover"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="16dp"
+        android:text="News from all over the world"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginEnd="20dp"
+        android:background="#5BC5BAB9"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        app:tabIndicatorColor="@color/black"
+        app:tabIndicatorHeight="3.5dp"
+        app:tabMode="auto"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextColor="#989391">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/ti_tesla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tesla" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/ti_apple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apple" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/ti_US"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USA" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/ti_techCrunch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TechCrunch" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/ti_wall_street_journal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wall Street Journal" />
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+</LinearLayout>
