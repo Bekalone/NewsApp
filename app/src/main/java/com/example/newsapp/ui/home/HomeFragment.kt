@@ -1,23 +1,20 @@
-package com.example.newsapp.ui.fragment.home
+package com.example.newsapp.ui.home
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import com.example.newsapp.R
 import com.example.newsapp.base.BaseFragment
 import com.example.newsapp.databinding.FragmentHomeBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
-
 
     override fun inflateViewBinding(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): FragmentHomeBinding {
-        return FragmentHomeBinding.inflate(inflater,container,false)
+        return FragmentHomeBinding.inflate(inflater, container, false)
     }
 
 
@@ -28,4 +25,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     override fun initView() {
 
     }
+
+
+
 }
