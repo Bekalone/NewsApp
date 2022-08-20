@@ -11,7 +11,6 @@ import com.example.newsapp.R
 abstract class BaseFragment<VB: ViewBinding>: Fragment() {
 
     protected lateinit var binding: VB
-    /*protected abstract var viewModel:VM*/
 
     abstract fun initListener()
     abstract fun initView()

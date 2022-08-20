@@ -17,6 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.imageview.ShapeableImageView
+            android:scaleType="centerCrop"
             android:id="@+id/image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -25,11 +26,12 @@
 
         <ImageButton
             android:id="@+id/btn_menu_burger"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:src="@drawable/ic_menu_burger"
+            android:background="#00FFFFFF"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

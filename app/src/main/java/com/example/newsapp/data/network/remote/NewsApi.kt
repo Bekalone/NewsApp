@@ -10,7 +10,9 @@ interface NewsApi {
 
     @GET("everything")
     suspend fun getNews(
-        @Query("q") search:String,
-        @Query("apiKey") apiKey:String = BuildConfig.API_KEY,
-    ) : Response<News>
+        @Query("apiKey") apiKey: String = BuildConfig.API_KEY,
+        @Query("q") search: String,
+        @Query("pageSize") pageSize: Int = 10,
+        @Query("page") page: Int = 1,
+    ): Response<News>
 }

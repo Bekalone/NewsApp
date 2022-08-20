@@ -1,18 +1,18 @@
-package com.example.newsapp.ui.news
+package com.example.newsapp.ui.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.newsapp.databinding.ItemNewsBinding
+import com.example.newsapp.databinding.ItemBreakingNewsBinding
 import com.example.newsapp.model.Article
 import com.example.newsapp.model.News
 
-class NewsAdapter(private val data: News) :
-    RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
+class NewsHomeAdapter(private val data: News) :
+    RecyclerView.Adapter<NewsHomeAdapter.NewsViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
-        return NewsViewHolder(ItemNewsBinding.inflate(LayoutInflater.from(parent.context),
+        return NewsViewHolder(ItemBreakingNewsBinding.inflate(LayoutInflater.from(parent.context),
             parent,
             false))
     }
@@ -23,12 +23,12 @@ class NewsAdapter(private val data: News) :
 
     override fun getItemCount(): Int = data.articles?.size ?: 0
 
-    class NewsViewHolder(private val binding: ItemNewsBinding) :
+    class NewsViewHolder(private val binding: ItemBreakingNewsBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(get: Article?) {
-            binding.imageNews.load(get?.urlToImage)
-            binding.titleNews.text = get?.title
-            binding.tvTime.text = get?.publishedAt
+            binding.image.load(get?.urlToImage)
+            binding.tvTitle.text = get?.title
+            binding.tvTimeNews.text = get?.publishedAt
         }
 
     }

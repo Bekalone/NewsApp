@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Notnik/AndroidStudioProjects/6 month task/NewsApp/app/src/main/res/drawable/ic_home.xml" value="0.1755" />
+        <entry key="..\:/Users/Notnik/AndroidStudioProjects/6 month task/NewsApp/app/src/main/res/drawable/ic_menu_burger.xml" value="0.1755" />
+        <entry key="..\:/Users/Notnik/AndroidStudioProjects/6 month task/NewsApp/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/Notnik/AndroidStudioProjects/6 month task/NewsApp/app/src/main/res/layout/fragment_news.xml" value="0.25" />
+        <entry key="..\:/Users/Notnik/AndroidStudioProjects/6 month task/NewsApp/app/src/main/res/layout/fragment_search.xml" value="0.25" />
+        <entry key="..\:/Users/Notnik/AndroidStudioProjects/6 month task/NewsApp/app/src/main/res/layout/item_breaking_news.xml" value="0.25" />
+        <entry key="..\:/Users/Notnik/AndroidStudioProjects/6 month task/NewsApp/app/src/main/res/layout/item_news.xml" value="0.25" />
         <entry key="..\:/Users/Notnik/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/custom_cardview.xml" value="0.1595" />
         <entry key="..\:/Users/Notnik/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/ic_home.xml" value="0.1595" />
         <entry key="..\:/Users/Notnik/AndroidStudioProjects/NewsApp/app/src/main/res/drawable/ic_menu_burger.xml" value="0.1595" />

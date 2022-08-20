@@ -17,6 +17,14 @@ class NewsFragment : BaseFragment<FragmentNewsBinding>() {
     private var category = "No category"
     private val viewModel: NewsViewModel by viewModel()
 
+    override fun inflateViewBinding(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
+    ): FragmentNewsBinding {
+        return FragmentNewsBinding.inflate(inflater, container, false)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         category = arguments?.getString(ARG_PARAM1).toString()
@@ -37,29 +45,21 @@ class NewsFragment : BaseFragment<FragmentNewsBinding>() {
     }
 
     override fun initView() {
-        var adapter: NewsAdapter
         viewModel.getNews(category)
-        val data = arrayListOf<Article>()
-        viewModel.serviceNews.observe(viewLifecycleOwner) { it: Resource<News?>? ->
+        /*viewModel.serviceNews.observe(viewLifecycleOwner) { it: Resource<News?>? ->
             when (it?.status) {
                 Resource.Status.SUCCESS -> {
-                    data.add(it.data as Article)
-                    Log.e("ololo", "initView: ${it.data}", )
+                    val adapter = it.data?.let { it1 -> NewsAdapter(it1) }
+                    binding.recyclerview.adapter = adapter
                 }
                 else -> {
 
                 }
             }
-            adapter = NewsAdapter(data)
+        }*/
+        viewModel.serviceNews.observe(viewLifecycleOwner) {
+            val adapter = NewsAdapter(it)
             binding.recyclerview.adapter = adapter
         }
-    }
-
-    override fun inflateViewBinding(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): FragmentNewsBinding {
-        return FragmentNewsBinding.inflate(inflater, container, false)
     }
 }

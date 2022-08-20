@@ -11,9 +11,4 @@
         android:icon="@drawable/ic_search"
         android:title="Search" />
 
-    <item
-        android:id="@+id/newsFragment"
-        android:icon="@drawable/ic_profile"
-        android:title="Profile" />
-
 </menu>
